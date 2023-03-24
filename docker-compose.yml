@@ -1,0 +1,20 @@
+# Switch to 'postgresql' in config/database.yml before running 'docker-compose up'
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "54333:5432"
+  web:
+    build: .
+    command: bin/rails server --port 3000 --binding 0.0.0.0
+    volumes:
+      - .:/sample_rails_app_7th_ed
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
