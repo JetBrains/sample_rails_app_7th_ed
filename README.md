@@ -32,8 +32,6 @@ docker build -t=sra7 .
    4. Press `OK`
    5. Select added SDK in `Ruby SDK and Gems` and press `OK`
 
-If you run into any trouble, you can remove `Gemfile.lock` and rebundle at any time:
-
 Next, migrate the database:
 
 ```
