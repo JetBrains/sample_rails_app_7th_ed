@@ -16,31 +16,16 @@ is available jointly under the MIT License and the Beerware License. See
 To get started with the app, clone the repo and then install the needed gems. You can clone the repo as follows:
 
 ```
-$ git clone https://github.com/JetBrains/sample_rails_app_7th_ed 
-$ cd sample_rails_app_7th_ed/
+git clone https://github.com/JetBrains/sample_rails_app_7th_ed 
+cd sample_rails_app_7th_ed/
 ```
 
-To install the gems, you will need the same versions of Ruby used to build the sample app, which you can find using the `cat` command as follows:
-
-```
-$ cat .ruby-version
-<Ruby version number>
-```
-
-Once you configured `ruby`, install required gems using following command with `--without production` flag
-```
-bundle install
-```
-
-If you run into any trouble, you can remove `Gemfile.lock` and rebundle at any time:
-
-```
-$ rm -f Gemfile.lock
-```
-and then with `--without production` flag
-```
-bundle install
-```
+Add Docker Compose Ruby SDK in RubyMine settings:
+1. Go to `Preferences | Languages & Frameworks | Ruby SDK and Gems`.
+2. Select `+` -> `Remote Interpreter or Version Manager...`
+3. At `Docker Compose` tab select `web` as `Service`
+4. Press `OK`
+5. Select added SDK in `Ruby SDK and Gems` and press `OK`
 
 Next, migrate the database:
 
