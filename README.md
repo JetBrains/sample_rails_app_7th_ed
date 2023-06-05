@@ -26,7 +26,7 @@ $ cat .ruby-version
 <Ruby version number>
 ```
 
-Once you configured `ruby`, install required gems using following command with `--without production` flag
+Once you configured `ruby`, install required gems using following command with `--without production` flag:
 ```
 bundle install
 ```
