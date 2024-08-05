@@ -21,7 +21,7 @@ gem "puma",                       "5.6.4"
 gem "bootsnap",                   "1.12.0", require: false
 
 group :development, :test do
-  gem "sqlite3", "2.0.3"
+  gem "sqlite3", "1.7.3"
 end
 
 group :development do
