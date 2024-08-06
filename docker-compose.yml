@@ -1,5 +1,4 @@
 # Switch to 'postgresql' in config/database.yml before running 'docker-compose up'
-version: '3'
 services:
   db:
     image: postgres
