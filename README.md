@@ -18,6 +18,8 @@ To get started with the app, clone the repo and then install the needed gems. Yo
 ```
 git clone https://github.com/JetBrains/sample_rails_app_7th_ed 
 cd sample_rails_app_7th_ed/
+docker compose up --detach
+docker compose exec web rake db:setup
 ```
 
 Add Docker Compose Ruby SDK in RubyMine settings:
@@ -27,23 +29,24 @@ Add Docker Compose Ruby SDK in RubyMine settings:
 4. Press `OK`
 5. Select added SDK in `Ruby SDK and Gems` and press `OK`
 
-Next, migrate the database:
+Go to a test file in RubyMine and click the green arrow to run a test.
+
+## Rake Tasks
+
+Open `Tools > Run Rake Task...` to access the Rake tasks.
+
+### Update the Database
+
+If the database is ever out-of-date, run the database migration Rake task from the Rake task list.
 
 ```
 rake db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
+### Run tests
+
+To try all the tests, run the `test` Rake task.
 
 ```
 rake test
-```
-
-If the test suite passes, you’ll be ready to seed the database with sample users and run the app in a local server:
-
-```
-rake db:seed
-```
-```
-rails server
 ```
